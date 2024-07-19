@@ -42,39 +42,35 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{ color: "orange" }}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT WE DO?</button>
+          <button>WHAT I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>branding</h1>
+          <h1>User-Centric Frontend Design</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a inventore accusamus fuga asperiores mollitia. Consequatur excepturi, accusamus asperiores tenetur eos quisquam eius esse, vitae sapiente
-            reprehenderit fugit sed deleniti!
+          I prioritize user experience by designing intuitive and responsive interfaces. With a mobile-first approach and modern design principles, I ensure your website looks and functions flawlessly across all devices.
           </p>
           <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>branding</h1>
+          <h1>Efficient and Scalable Web Development</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a inventore accusamus fuga asperiores mollitia. Consequatur excepturi, accusamus asperiores tenetur eos quisquam eius esse, vitae sapiente
-            reprehenderit fugit sed deleniti!
+          I build websites that are not only visually appealing but also efficient and scalable. Utilizing the latest technologies, I ensure your site performs well under varying traffic conditions and is ready for future growth.
           </p>
           <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>branding</h1>
+          <h1>Seamless Integration of Cutting-Edge Technologies</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a inventore accusamus fuga asperiores mollitia. Consequatur excepturi, accusamus asperiores tenetur eos quisquam eius esse, vitae sapiente
-            reprehenderit fugit sed deleniti!
+          I incorporate the latest technologies and frameworks to create dynamic and interactive web applications. My expertise in React, Laravel, and other modern tools ensures your website remains competitive and up-to-date.
           </p>
           <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>branding</h1>
+          <h1>Continuous Improvement and Optimization</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a inventore accusamus fuga asperiores mollitia. Consequatur excepturi, accusamus asperiores tenetur eos quisquam eius esse, vitae sapiente
-            reprehenderit fugit sed deleniti!
+          I believe in continuous improvement and regularly optimize websites for better performance, security, and SEO. By analyzing user data and feedback, I make informed decisions to enhance your site`s functionality and user engagement
           </p>
           <button>Go</button>
         </motion.div>
