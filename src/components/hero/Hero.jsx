@@ -45,10 +45,10 @@ export const Hero = () => {
       <div className="wrapper">
         <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
           <motion.h2 variants={textVariants}>AHMAD FERNANDO</motion.h2>
-          <motion.h1 variants={textVariants}>Frontend Engineer and Web Developer</motion.h1>
+          <motion.h1 variants={textVariants}>Software Engineer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href="https://drive.google.com/file/d/1Jv0VBmMMw50K53pTGRKi6doJgPGG0MQa/view?usp=drive_link" target='_blank' rel="noreferrer"><motion.button variants={textVariants}>See My CV</motion.button></a>
-            <a href="#Contact"><motion.button variants={textVariants}>Contact Me</motion.button></a>
+            <a href="mailto:ahmadfernando1999@gmail.com?subject=Judul%20Email&body=Isi%20email%20di%20sini"><motion.button variants={textVariants}>Contact Me</motion.button></a>
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
         </motion.div>
