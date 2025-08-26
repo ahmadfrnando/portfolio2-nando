@@ -47,7 +47,7 @@ export const Hero = () => {
           <motion.h2 variants={textVariants}>AHMAD FERNANDO</motion.h2>
           <motion.h1 variants={textVariants}>Frontend Engineer and Web Developer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <a href="https://drive.google.com/file/d/1SEUOdnJYnQ6n8egQtdrschmTg8ZjbEA1/view?usp=sharing" target='_blank' rel="noreferrer"><motion.button variants={textVariants}>See My CV</motion.button></a>
+            <a href="https://drive.google.com/file/d/1Jv0VBmMMw50K53pTGRKi6doJgPGG0MQa/view?usp=sharing" target='_blank' rel="noreferrer"><motion.button variants={textVariants}>See My CV</motion.button></a>
             <a href="#Contact"><motion.button variants={textVariants}>Contact Me</motion.button></a>
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
@@ -60,3 +60,4 @@ export const Hero = () => {
     </div>
   );
 };
+
