@@ -26,18 +26,30 @@ const Contact = () => {
   const isInView = useInView(ref, { margin: '-100px' });
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    const serviceID = import.meta.env.VITE_SERVICE_ID_EMAILJS;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID_EMAILJS;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
+
+    // Validasi dulu login ke emailjs 
+    if (!serviceID || !templateID || !publicKey) {
+      console.error('EmailJS credentials are missing!');
+      setError(true);
+      return;
+    }
 
     emailjs
-      .sendForm('service_h0rno0p', 'template_fdir1m2', formRef.current, {
-        publicKey: '58VPsvEM_JSDjlOk2',
-      })
+      .sendForm(serviceID, templateID, formRef.current, publicKey) // Langsung string, bukan object
       .then(
         (result) => {
-          setSuccess(true)
+          console.log('SUCCESS!', result.text);
+          setSuccess(true);
+          formRef.current.reset(); // Reset form setelah sukses
         },
         (error) => {
-          setError(true)
-        },
+          console.log('FAILED...', error.text);
+          setError(true);
+        }
       );
   };
 

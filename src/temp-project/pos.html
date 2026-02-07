@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop POS System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-16 bg-white shadow-lg flex flex-col items-center py-6 space-y-6">
+            <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+                <i class="fas fa-coffee text-gray-600"></i>
+            </div>
+            <a href="#" class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-cloud"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-info-circle"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-dice"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-users"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-gifts"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-th"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-chart-bar"></i>
+            </a>
+            <div class="flex-1"></div>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-lock"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#" class="w-10 h-10 hover:bg-gray-100 rounded-lg flex items-center justify-center text-gray-400">
+                <i class="fas fa-folder"></i>
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <div class="bg-white shadow-sm px-6 py-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-image text-gray-400"></i>
+                    </div>
+                    <div class="flex-1">
+                        <input type="text" placeholder="Search menu here..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="flex-1 overflow-auto p-6">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <!-- Back Button & Grid Selector -->
+                    <div class="flex items-center justify-between mb-6">
+                        <button class="w-10 h-10 border-2 border-blue-600 rounded-full flex items-center justify-center text-blue-600">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none">
+                            <option>Grid 5</option>
+                            <option>Grid 3</option>
+                            <option>Grid 4</option>
+                        </select>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <button class="px-6 py-2 bg-blue-600 text-white rounded-full font-medium">All</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Hot Coffee</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Iced Coffee</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Non Coffee</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Pastry</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Snacks</button>
+                        <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50">Breakfast</button>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="grid grid-cols-5 gap-4">
+                        <!-- Product Card 1 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop" alt="Espresso" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Espresso</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 25.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Cappuccino" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Cappuccino</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 35.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop" alt="Americano" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Americano</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 30.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=400&h=300&fit=crop" alt="Latte" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Latte</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 38.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=300&fit=crop" alt="Affogato" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Affogato</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 42.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=300&fit=crop" alt="Iced Latte" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Iced Latte</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 40.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Cold Brew" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Cold Brew</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 45.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop" alt="Frappe" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Frappe</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 48.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 9 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop" alt="Chocolate Chip Cookie" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Chocolate Chip Cookie</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 20.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 10 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Croissant" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Croissant</h3>
+                                <p class="text-blue-600 font-bold mb-3">Rp 28.000,-</p>
+                                <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - Order Summary -->
+        <div class="w-96 bg-white shadow-lg flex flex-col">
+            <div class="p-6 border-b">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <p class="text-xs text-gray-500">Order Number</p>
+                        <p class="font-bold text-gray-800">#CAFE-A-0207-001</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs text-gray-500">No. Table</p>
+                        <p class="font-bold text-gray-800">WB 12 A</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="flex-1 overflow-auto p-6">
+                <div class="mb-4 pb-4 border-b">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-800">Cappuccino</h4>
+                            <p class="text-xs text-gray-500">1 pcs</p>
+                        </div>
+                        <p class="font-bold text-gray-800">Rp 35.000,-</p>
+                    </div>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>Add-Ons: Extra Shot</p>
+                        <p>Notes: No sugar</p>
+                    </div>
+                    <div class="flex gap-2 mt-2">
+                        <button class="w-8 h-8 border border-gray-300 rounded flex items-center justify-center hover:bg-gray-50">
+                            <i class="fas fa-edit text-gray-600 text-xs"></i>
+                        </button>
+                        <button class="w-8 h-8 border border-red-300 rounded flex items-center justify-center hover:bg-red-50">
+                            <i class="fas fa-trash text-red-600 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-4 pb-4 border-b">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-800">Croissant</h4>
+                            <p class="text-xs text-gray-500">2 pcs</p>
+                        </div>
+                        <p class="font-bold text-gray-800">Rp 56.000,-</p>
+                    </div>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>Notes: Warm it up</p>
+                    </div>
+                    <div class="flex gap-2 mt-2">
+                        <button class="w-8 h-8 border border-gray-300 rounded flex items-center justify-center hover:bg-gray-50">
+                            <i class="fas fa-edit text-gray-600 text-xs"></i>
+                        </button>
+                        <button class="w-8 h-8 border border-red-300 rounded flex items-center justify-center hover:bg-red-50">
+                            <i class="fas fa-trash text-red-600 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary Footer -->
+            <div class="p-6 border-t">
+                <div class="mb-4">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Subtotal</span>
+                        <span class="font-semibold">Rp 91.000,-</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Tax (10%)</span>
+                        <span class="font-semibold">Rp 9.100,-</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold border-t pt-2">
+                        <span>Total</span>
+                        <span>Rp 100.100,-</span>
+                    </div>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-credit-card"></i>
+                    Pay Now
+                </button>
+            </div>
+
+            <!-- Floating Chat Button -->
+            <div class="absolute bottom-24 right-8">
+                <button class="w-14 h-14 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition relative">
+                    <i class="fas fa-comments text-xl"></i>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

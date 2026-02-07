@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pengajuan Kerja Sama Korporat - Borong Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                        <i class="fas fa-handshake text-blue-900 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">Borong Web</h1>
+                        <p class="text-xs text-blue-200">Sistem Kerja Sama Korporat</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#beranda" class="hover:text-blue-200 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-blue-200 transition">Tentang</a>
+                    <a href="#jenis" class="hover:text-blue-200 transition">Jenis Kerja Sama</a>
+                    <a href="#alur" class="hover:text-blue-200 transition">Alur Pengajuan</a>
+                    <a href="#formulir" class="hover:text-blue-200 transition">Ajukan</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="beranda" class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-6">
+                    <div class="inline-block p-4 bg-white bg-opacity-10 rounded-full mb-6">
+                        <i class="fas fa-handshake text-6xl"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Corporate Cooperation Application</h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">This application is designed to facilitate the process of applying for and receiving cooperation efficiently.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#formulir" class="px-8 py-4 bg-white text-blue-900 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg flex items-center gap-2">
+                        <i class="fas fa-paper-plane"></i>
+                        Ajukan Kerja Sama
+                    </a>
+                    <a href="#tentang" class="px-8 py-4 border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition flex items-center gap-2">
+                        <i class="fas fa-info-circle"></i>
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Mengapa Bermitra dengan Kami?</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Kami berkomitmen membangun kerja sama yang saling menguntungkan melalui sistem pengajuan yang terstruktur dan transparan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200 hover:shadow-lg transition">
+                        <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-clipboard-check text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Proses Pengajuan Terstruktur</h3>
+                        <p class="text-gray-700">Sistem pengajuan yang jelas dengan tahapan terorganisir untuk memastikan setiap proposal ditangani dengan profesional.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 border border-green-200 hover:shadow-lg transition">
+                        <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-eye text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Transparansi Status Kerja Sama</h3>
+                        <p class="text-gray-700">Pantau perkembangan pengajuan kerja sama Anda secara real-time dengan sistem tracking yang transparan.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 border border-purple-200 hover:shadow-lg transition">
+                        <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-clock text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Efisiensi Administrasi</h3>
+                        <p class="text-gray-700">Digitalisasi proses administrasi untuk mempercepat dan menyederhanakan pengelolaan dokumen kerja sama.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 border border-orange-200 hover:shadow-lg transition">
+                        <div class="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-sync-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Kolaborasi Berkelanjutan</h3>
+                        <p class="text-gray-700">Membangun hubungan jangka panjang dengan mitra melalui sistem manajemen kerja sama yang terpadu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="jenis" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Jenis Kerja Sama</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Kami menawarkan berbagai bentuk kerja sama yang dapat disesuaikan dengan kebutuhan organisasi Anda.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden border-t-4 border-blue-600">
+                        <div class="p-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-database text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Kerja Sama Data & Informasi</h3>
+                            <p class="text-gray-600 text-center text-sm mb-4">Berbagi data dan informasi untuk mendukung pengambilan keputusan yang lebih baik.</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-blue-600 mt-1"></i>
+                                    <span>Pertukaran data terstruktur</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-blue-600 mt-1"></i>
+                                    <span>Integrasi sistem informasi</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-blue-600 mt-1"></i>
+                                    <span>Analisis data bersama</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden border-t-4 border-green-600">
+                        <div class="p-6">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-microchip text-3xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Kerja Sama Teknologi</h3>
+                            <p class="text-gray-600 text-center text-sm mb-4">Kolaborasi pengembangan dan implementasi teknologi terkini.</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Transfer teknologi</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Pengembangan solusi digital</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-600 mt-1"></i>
+                                    <span>Konsultasi teknis</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden border-t-4 border-purple-600">
+                        <div class="p-6">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-flask text-3xl text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Kerja Sama Penelitian</h3>
+                            <p class="text-gray-600 text-center text-sm mb-4">Riset bersama untuk menghasilkan inovasi dan pengetahuan baru.</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-purple-600 mt-1"></i>
+                                    <span>Proyek riset kolaboratif</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-purple-600 mt-1"></i>
+                                    <span>Publikasi ilmiah bersama</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-purple-600 mt-1"></i>
+                                    <span>Pengembangan prototipe</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden border-t-4 border-orange-600">
+                        <div class="p-6">
+                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-cogs text-3xl text-orange-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Kerja Sama Operasional</h3>
+                            <p class="text-gray-600 text-center text-sm mb-4">Optimalisasi operasional melalui kolaborasi strategis.</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-orange-600 mt-1"></i>
+                                    <span>Peningkatan efisiensi</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-orange-600 mt-1"></i>
+                                    <span>Berbagi sumber daya</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-orange-600 mt-1"></i>
+                                    <span>Koordinasi program</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="alur" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Alur Pengajuan Kerja Sama</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Proses pengajuan kerja sama yang sistematis dan terstruktur untuk memastikan kualitas kemitraan.</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+                    <div class="space-y-12">
+                        <div class="relative flex items-center gap-8">
+                            <div class="flex-1 text-right">
+                                <div class="bg-blue-50 rounded-lg p-6 border border-blue-200 hover:shadow-lg transition">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">1. Registrasi Mitra</h3>
+                                    <p class="text-gray-600">Mendaftar sebagai mitra potensial dengan mengisi data profil perusahaan atau organisasi secara lengkap.</p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="flex-1"></div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="flex-1"></div>
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="bg-blue-50 rounded-lg p-6 border border-blue-200 hover:shadow-lg transition">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">2. Pengajuan Proposal</h3>
+                                    <p class="text-gray-600">Menyusun dan mengirimkan proposal kerja sama yang detail mencakup tujuan, lingkup, dan manfaat kolaborasi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="flex-1 text-right">
+                                <div class="bg-blue-50 rounded-lg p-6 border border-blue-200 hover:shadow-lg transition">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">3. Verifikasi Dokumen</h3>
+                                    <p class="text-gray-600">Tim kami akan melakukan verifikasi kelengkapan dan validitas dokumen pendukung yang diajukan.</p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="flex-1"></div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="flex-1"></div>
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="bg-blue-50 rounded-lg p-6 border border-blue-200 hover:shadow-lg transition">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">4. Evaluasi & Persetujuan</h3>
+                                    <p class="text-gray-600">Proposal akan dievaluasi oleh tim teknis dan manajemen untuk menentukan kelayakan kerja sama.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="flex-1 text-right">
+                                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200 hover:shadow-lg transition">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">5. Penandatanganan Kerja Sama</h3>
+                                    <p class="text-gray-600">Setelah disetujui, dilakukan penandatanganan perjanjian kerja sama dan inisiasi implementasi.</p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <div class="flex-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulir" class="py-20 bg-gradient-to-br from-blue-900 to-blue-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12 text-white">
+                    <h2 class="text-4xl font-bold mb-4">Ajukan Kerja Sama</h2>
+                    <p class="text-lg text-blue-100">Isi formulir berikut untuk memulai proses pengajuan kerja sama dengan kami.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+                    <form id="cooperationForm">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2" for="namaPerusahaan">
+                                <i class="fas fa-building text-blue-600 mr-2"></i>Nama Perusahaan
+                            </label>
+                            <input type="text" id="namaPerusahaan" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="PT Contoh Perusahaan Indonesia" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2" for="bidangUsaha">
+                                <i class="fas fa-briefcase text-blue-600 mr-2"></i>Bidang Usaha
+                            </label>
+                            <input type="text" id="bidangUsaha" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Teknologi Informasi" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2" for="emailPerusahaan">
+                                    <i class="fas fa-envelope text-blue-600 mr-2"></i>Email Perusahaan
+                                </label>
+                                <input type="email" id="emailPerusahaan" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="info@perusahaan.co.id" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2" for="nomorTelepon">
+                                    <i class="fas fa-phone text-blue-600 mr-2"></i>Nomor Telepon
+                                </label>
+                                <input type="tel" id="nomorTelepon" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="021-12345678" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2" for="jenisKerjaSama">
+                                <i class="fas fa-handshake text-blue-600 mr-2"></i>Jenis Kerja Sama
+                            </label>
+                            <select id="jenisKerjaSama" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Pilih Jenis Kerja Sama</option>
+                                <option value="data">Kerja Sama Data & Informasi</option>
+                                <option value="teknologi">Kerja Sama Teknologi</option>
+                                <option value="penelitian">Kerja Sama Penelitian</option>
+                                <option value="operasional">Kerja Sama Operasional</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2" for="deskripsi">
+                                <i class="fas fa-align-left text-blue-600 mr-2"></i>Deskripsi Singkat Kerja Sama
+                            </label>
+                            <textarea id="deskripsi" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Jelaskan tujuan dan ruang lingkup kerja sama yang diajukan..." required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label class="flex items-start gap-3">
+                                <input type="checkbox" class="mt-1" required>
+                                <span class="text-sm text-gray-600">Saya menyatakan bahwa informasi yang diberikan adalah benar dan akurat. Saya memahami bahwa pengajuan ini akan diproses sesuai dengan prosedur yang berlaku.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition shadow-lg flex items-center justify-center gap-2 text-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pengajuan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Terpercaya</h3>
+                        <p class="text-gray-600">Sistem terkelola dengan standar keamanan dan integritas tinggi</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Efisien</h3>
+                        <p class="text-gray-600">Proses cepat dan terstruktur menghemat waktu dan biaya administrasi</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kolaboratif</h3>
+                        <p class="text-gray-600">Membangun ekosistem kerja sama yang saling menguntungkan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Borong Web</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Membangun kerja sama yang berkelanjutan untuk masa depan yang lebih baik.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontak Kami</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            <span>Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span>kerjasama@sinergind.co.id</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone text-blue-500"></i>
+                            <span>(021) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#beranda" class="hover:text-blue-400 transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-blue-400 transition">Tentang</a></li>
+                        <li><a href="#jenis" class="hover:text-blue-400 transition">Jenis Kerja Sama</a></li>
+                        <li><a href="#alur" class="hover:text-blue-400 transition">Alur Pengajuan</a></li>
+                        <li><a href="#formulir" class="hover:text-blue-400 transition">Ajukan Kerja Sama</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Borong Web. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('cooperationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pengajuan kerja sama Anda telah berhasil dikirim. Tim kami akan menghubungi Anda dalam 3-5 hari kerja.');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
