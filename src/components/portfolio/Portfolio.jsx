@@ -75,7 +75,7 @@ const items = [
   },
   {
     id: 11,
-    title: 'Human Resources Management System (HRMS)',
+    title: 'SiPangan',
     img: './projects/project11.png',
     desc: 'Designed and developed a public-facing web platform to provide real-time food price information. Implemented role-based access control, automated updates, and responsive dashboards, supporting open-data initiatives and reducing manual data management',
     link: '#',
