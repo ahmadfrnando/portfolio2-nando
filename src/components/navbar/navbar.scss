@@ -18,9 +18,11 @@
 
     span {
       font-weight: bold;
+      padding-left: max(0px, (90px - (100vw - 1366px) / 2));
+
       @include mobile{
         display: none;
-    }
+      }
     }
 
     .social {
