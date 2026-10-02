@@ -1,0 +1,137 @@
+@import '../../app.scss';
+
+.about {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  overflow: hidden;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 16px 20px;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mobile {
+      gap: 14px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 72px;
+
+      @include mobile {
+        font-size: 36px;
+      }
+
+      span {
+        color: orange;
+      }
+    }
+
+    p {
+      color: gray;
+      font-size: 20px;
+      line-height: 1.5;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 10px;
+
+      @include mobile {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .stat {
+        h2 {
+          color: orange;
+          font-size: 28px;
+
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+
+        span {
+          font-size: 14px;
+          color: gray;
+
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .skillsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include mobile {
+      width: 100%;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .skillGroup {
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+
+        @include mobile {
+          font-size: 13px;
+          text-align: center;
+          margin-bottom: 8px;
+        }
+      }
+
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @include mobile {
+          justify-content: center;
+          gap: 6px;
+        }
+
+        span {
+          padding: 8px 16px;
+          border: 1px solid orange;
+          border-radius: 20px;
+          color: orange;
+          font-size: 15px;
+
+          @include mobile {
+            padding: 4px 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

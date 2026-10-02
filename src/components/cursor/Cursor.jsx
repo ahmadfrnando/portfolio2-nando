@@ -1,13 +1,18 @@
 import './cursor.scss';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  // motion values update the DOM directly, so mouse movement doesn't re-render React
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { stiffness: 500, damping: 40 });
+  const springY = useSpring(y, { stiffness: 500, damping: 40 });
 
   useEffect(() => {
     const mouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      x.set(e.clientX + 10);
+      y.set(e.clientY + 10);
     };
 
     window.addEventListener('mousemove', mouseMove);
@@ -15,8 +20,8 @@ const Cursor = () => {
     return () => {
       window.removeEventListener('mousemove', mouseMove);
     };
-  }, []);
-  return <motion.div className="cursor" animate={{ x:position.x+10, y:position.y+10 }} ></motion.div>;
+  }, [x, y]);
+  return <motion.div className="cursor" style={{ x: springX, y: springY }}></motion.div>;
 };
 
 export default Cursor;

@@ -90,6 +90,23 @@
         @include mobile {
           padding: 10px;
         }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: wait;
+        }
+      }
+
+      .formMessage {
+        font-size: 14px;
+
+        &.success {
+          color: lightgreen;
+        }
+
+        &.error {
+          color: tomato;
+        }
       }
     }
   }

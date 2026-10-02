@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import './contact.scss';
 import { motion, useInView } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -19,14 +19,14 @@ const variants = {
 };
 
 const Contact = () => {
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [status, setStatus] = useState('idle');
   const formRef = useRef();
   const ref = useRef();
   const isInView = useInView(ref, { margin: '-100px' });
   const sendEmail = (e) => {
     e.preventDefault();
-    
+    if (status === 'sending') return;
+
     const serviceID = import.meta.env.VITE_SERVICE_ID_EMAILJS;
     const templateID = import.meta.env.VITE_TEMPLATE_ID_EMAILJS;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
@@ -34,21 +34,23 @@ const Contact = () => {
     // Validasi dulu login ke emailjs 
     if (!serviceID || !templateID || !publicKey) {
       console.error('EmailJS credentials are missing!');
-      setError(true);
+      setStatus('error');
       return;
     }
+
+    setStatus('sending');
 
     emailjs
       .sendForm(serviceID, templateID, formRef.current, publicKey) // Langsung string, bukan object
       .then(
         (result) => {
           console.log('SUCCESS!', result.text);
-          setSuccess(true);
+          setStatus('success');
           formRef.current.reset(); // Reset form setelah sukses
         },
         (error) => {
           console.log('FAILED...', error.text);
-          setError(true);
+          setStatus('error');
         }
       );
   };
@@ -56,14 +58,14 @@ const Contact = () => {
   return (
     <motion.div ref={ref} className="contact" variants={variants} initial="initial" whileInView="animate">
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1>Let`s Work Toegther</motion.h1>
+        <motion.h1>Let&apos;s Work Together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
           <span>ahmadfernando1999@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Ayahanda Street at Medan City, North Sumatera, Indonesia</span>
+          <span>Medan, North Sumatra, Indonesia</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
@@ -103,10 +105,10 @@ const Contact = () => {
         <motion.form ref={formRef} onSubmit={sendEmail} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }}>
           <input type="text" placeholder="Name" name="name" required />
           <input type="email" placeholder="Email" name="email" required />
-          <textarea rows={8} placeholder="Message" name="message" />
-          <button>Submit</button>
-          {error && "Error" }
-          {success && "Success" }
+          <textarea rows={8} placeholder="Message" name="message" required />
+          <button disabled={status === 'sending'}>{status === 'sending' ? 'Sending...' : 'Submit'}</button>
+          {status === 'success' && <p className="formMessage success">Thank you! Your message has been sent.</p>}
+          {status === 'error' && <p className="formMessage error">Something went wrong. Please email me directly at ahmadfernando1999@gmail.com.</p>}
         </motion.form>
       </div>
     </motion.div>

@@ -24,16 +24,16 @@ const Services = () => {
     const ref = useRef()
     const isInView = useInView(ref, {margin:"-100px"})
   return (
-    <motion.div ref={ref} className="services" variants={variants} initial="initial" animate={"animate"}>
+    <motion.div ref={ref} className="services" variants={variants} initial="initial" animate={isInView && "animate"}>
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on make websites that are fast, easy to use, <br /> and beautiful.
+          I build web applications that are fast, reliable, <br /> and easy to use.
         </p>
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          <img src="/people.webp" alt="People collaborating" />
           <h1>
             <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
@@ -42,37 +42,33 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{ color: "orange" }}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT I DO?</button>
+          <a href="#Portfolio"><button>SEE MY WORK</button></a>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>User-Centric Frontend Design</h1>
+          <h1>Fullstack Web Applications</h1>
           <p>
-          I prioritize user experience by designing intuitive and responsive interfaces. With a mobile-first approach and modern design principles, I ensure your website looks and functions flawlessly across all devices.
+            I build complete web applications from database to interface, with Laravel on the backend and React, Next.js, or Vue.js on the frontend, designed around the real workflows of the people who use them.
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>Efficient and Scalable Web Development</h1>
+          <h1>Backend & API Development</h1>
           <p>
-          I build websites that are not only visually appealing but also efficient and scalable. Utilizing the latest technologies, I ensure your site performs well under varying traffic conditions and is ready for future growth.
+            I design clean RESTful APIs and reliable data models with MySQL and PostgreSQL, including role-based access control, payment gateway integration with Xendit, and file storage with MinIO.
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>Seamless Integration of Cutting-Edge Technologies</h1>
+          <h1>Deployment & Infrastructure</h1>
           <p>
-          I incorporate the latest technologies and frameworks to create dynamic and interactive web applications. My expertise in React, Laravel, and other modern tools ensures your website remains competitive and up-to-date.
+            I containerize applications with Docker and deploy them on Linux VPS environments, so every project ships with a setup that is reproducible, secure, and easy to maintain.
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{ background: 'lightgray', color: 'black' }}>
-          <h1>Continuous Improvement and Optimization</h1>
+          <h1>Maintenance & Optimization</h1>
           <p>
-          I believe in continuous improvement and regularly optimize websites for better performance, security, and SEO. By analyzing user data and feedback, I make informed decisions to enhance your site`s functionality and user engagement
+            I keep systems healthy after launch by tuning database queries, improving performance, and adding features as business needs grow, from government services to POS and HR systems.
           </p>
-          <button>Go</button>
         </motion.div>
       </motion.div>
     </motion.div>

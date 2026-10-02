@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const variants = {
   open: {
-    trasnsition: {
+    transition: {
       staggerChildren: 0.1,
     },
   },
@@ -26,7 +26,7 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ['Homepage', 'Services', 'Portfolio', 'Contact', 'About'];
+  const items = ['Homepage', 'About', 'Services', 'Portfolio', 'Contact'];
 
   return (
     <motion.div className="links" variants={variants}>

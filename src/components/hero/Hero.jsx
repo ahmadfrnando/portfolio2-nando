@@ -48,14 +48,14 @@ export const Hero = () => {
           <motion.h1 variants={textVariants}>Software Engineer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href="https://drive.google.com/file/d/1Bmj7IS2aVBENnHZUsrFnMGZrRlFJQlgN/view?usp=drivesdk" target='_blank' rel="noreferrer"><motion.button variants={textVariants}>See My CV</motion.button></a>
-            <a href="mailto:ahmadfernando1999@gmail.com?subject=Judul%20Email&body=Isi%20email%20di%20sini"><motion.button variants={textVariants}>Contact Me</motion.button></a>
+            <a href="mailto:ahmadfernando1999@gmail.com?subject=Project%20Inquiry"><motion.button variants={textVariants}>Contact Me</motion.button></a>
           </motion.div>
-          <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
+          <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="Scroll down" />
         </motion.div>
       </div>
-      <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Software Engineer Product Developer UX/UI Specialist</motion.div>
+      <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">Fullstack Developer · Laravel · Next.js · Docker</motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="/hero.webp" alt="Ahmad Fernando" />
       </div>
     </div>
   );
