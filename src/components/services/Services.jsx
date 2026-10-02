@@ -19,12 +19,23 @@ const variants = {
   },
 };
 
+// the observed container must not be translated off-screen,
+// otherwise useInView never fires on narrow (mobile) viewports
+const containerVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Services = () => {
 
     const ref = useRef()
     const isInView = useInView(ref, {margin:"-100px"})
   return (
-    <motion.div ref={ref} className="services" variants={variants} initial="initial" animate={isInView && "animate"}>
+    <motion.div ref={ref} className="services" variants={containerVariants} initial="initial" animate={isInView && "animate"}>
       <motion.div className="textContainer" variants={variants}>
         <p>
           I build web applications that are fast, reliable, <br /> and easy to use.
