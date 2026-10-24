@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+.git
+.vscode
+.idea
+.DS_Store
+*.log
+originals
+# Env dikirim lewat build args, jangan ikut masuk image.
+.env
+.env.*
+!.env.example
