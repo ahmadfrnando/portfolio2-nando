@@ -23,7 +23,7 @@ const stats = [
 ];
 
 const skills = [
-  { group: 'Backend', items: ['Laravel', 'REST API', 'MySQL', 'PostgreSQL', 'Go'] },
+  { group: 'Backend', items: ['Laravel', 'REST API', 'MySQL', 'PostgreSQL', 'Go', 'Node Js'] },
   { group: 'Frontend', items: ['Next.js', 'React.js', 'Vue.js'] },
   { group: 'DevOps', items: ['Docker', 'Linux VPS', 'MinIO', 'Space Digital Ocean'] },
   { group: 'Integrations', items: ['Xendit', 'Biometric Devices', 'Accurate', 'Midtrans', 'Google APIs'] },
